@@ -1,7 +1,6 @@
 class Rectangle
     def initialize(length = 0,breath = 0)
-        @length = length
-        @breath = breath
+        @length,@breath = length,breath
     end
 
     def area()
@@ -9,8 +8,7 @@ class Rectangle
     end
 
     def setDim(length,breath)
-        @length = length
-        @breath = breath
+        @length,@breath = length,breath
     end
 
 end
