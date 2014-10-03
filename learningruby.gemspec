@@ -2,11 +2,9 @@
 lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
  
-require 'bundler/version'
- 
 Gem::Specification.new do |s|
   s.name        = "learningruby"
-  s.version     = Bundler::VERSION
+  s.version     = "0.0.1"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Sharat M R"]
   s.email       = ["cosmosgennius@gmail.com"]
@@ -20,6 +18,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec"
  
   s.files        = Dir.glob("{bin,lib}/**/*") + %w(LICENSE README.md)
-  s.executables  = ['bundle']
   s.require_path = 'lib'
 end
