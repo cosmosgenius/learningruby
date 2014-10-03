@@ -16,7 +16,9 @@ Gem::Specification.new do |s|
   s.rubyforge_project         = "bundler"
  
   s.add_development_dependency "rake"
- 
+
+  all_files       = `git ls-files -z`.split("\x0")
   s.files        = Dir.glob("{bin,lib}/**/*") + %w(LICENSE README.md)
   s.require_path = 'lib'
+  s.executables  = all_files.grep(%r{^bin/}) { |f| File.basename(f) } 
 end
