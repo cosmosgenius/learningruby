@@ -19,10 +19,7 @@ def gem_file
   "#{name}-#{version}.gem"
 end
 
-desc "Default Task"
-task :default do
-    puts "Learning Ruby version " + version()
-end
+multitask :default => [:test]
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
